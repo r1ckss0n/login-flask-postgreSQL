@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <div class="box-shadow">
+            <ul>
+                <li><h1>Login</h1></li>
+                <hr>
+                {{ alert }}
+                <form action="{{ url_for('login') }}" method="post">
+                    <li><input type="text" name="user" id="user" placeholder="Enter an username"></li>
+                    <li><input type="password" name="password1" id="password1" placeholder="Enter a password"></li>
+                    <li><input type="submit" value="Login"></input></li>
+                </form>
+            </ul>
+        </div>
+{% endblock %}

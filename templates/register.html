@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <div class="box-shadow">
+        <ul>
+            <li><h1>Register</h1></li>
+            <hr>
+            {{ alert }}
+            <form action="{{ url_for('register') }}" method="post">
+                <li><input type="text" name="user" id="user" placeholder="Enter an username"></li>
+                <li><input type="password" name="password1" id="password1" placeholder="Enter a password"></li>
+                <li><input type="password" name="password2" id="password2" placeholder="Confirm password"></li>
+                <li><input type="submit" value="Register"></input></li>
+            </form>
+        </ul>
+    </div>
+{% endblock %}
